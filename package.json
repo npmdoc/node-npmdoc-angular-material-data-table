@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-angular-material-data-table",     "homepage": "https://github.com/npmdoc/node-npmdoc-angular-material-data-table",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-angular-material-data-table.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  angular-material-data-table (v0.10.10)  [![npm package](https://img.shields.io/npm/v/npmdoc-angular-material-data-table.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-angular-material-data-table) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-angular-material-data-table.svg)](https://travis-ci.org/npmdoc/node-npmdoc-angular-material-data-table)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-angular-material-data-table",
+    "keywords": [
+        "documentation",
+        "angular-material-data-table"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_angular_material_data_table.js",
+    "name": "npmdoc-angular-material-data-table",
+    "nameAlias": "npmdoc_angular_material_data_table",
+    "nameOriginal": "npmdoc-angular-material-data-table",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-angular-material-data-table.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
